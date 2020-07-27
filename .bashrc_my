@@ -1,0 +1,35 @@
+export CLICOLOR=1
+if [ -f ~/.bashrc_lscolors ]; then
+  . ~/.bashrc_lscolors
+fi
+export GREP_OPTIONS='--color=auto'
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+vline()
+{
+    for i in {0..78}
+    do
+      echo -n "-"
+    done
+    echo ""
+}
+alias s='clear; pwd | while read line; do echo -n $line'/'; done; echo ''; vline; ls -lh; vline; echo '''
+
+alias_cd()
+{
+    cd "$@"
+    s
+}
+alias cd=alias_cd
+
+alias word="grep -n -r . -e "
+
+function _rmtrash(){
+    mv $@ ~/.Trash
+};
+alias rmrm=/bin/rm
+alias rm="_rmtrash"
