@@ -31,5 +31,5 @@ alias word="grep -n -r . -e "
 function _rmtrash(){
     mv $@ ~/.Trash
 };
-alias rmrm=/bin/rm
-alias rm="_rmtrash"
+#alias rmrm=/bin/rm
+#alias rm="_rmtrash"
