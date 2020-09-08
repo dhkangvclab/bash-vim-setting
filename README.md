@@ -14,7 +14,5 @@ RUN apt-get install -y wget unzip && wget https://github.com/dhkangvclab/bash-vi
 To install on a linux environment, run
 
 ```
-apt-get install -y wget unzip && wget https://github.com/dhkangvclab/bash-vim-setting/archive/master.zip && unzip master.zip && cd bash-vim-setting-master && sudo printf "\n# My custom bash profile\nif [ -f ~/.bashrc_my ]; then\n  . ~/.bashrc_my \nfi\n" >> ~/.bashrc && sudo cp -rf .bashrc_my .bashrc_lscolors .vimrc .vim ~/ && cd .. && rm -rf master.zip bash-vim-setting-master
+apt-get install -y wget unzip && wget https://github.com/dhkangvclab/bash-vim-setting/archive/master.zip && unzip master.zip && cd bash-vim-setting-master && printf "\n# My custom bash profile\nif [ -f ~/.bashrc_my ]; then\n  . ~/.bashrc_my \nfi\n" >> ~/.bashrc && cp -rf .bashrc_my .bashrc_lscolors .vimrc .vim ~/ && cd .. && rm -rf master.zip bash-vim-setting-master
 ```
-
-(`sudo` is added)
