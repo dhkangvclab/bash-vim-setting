@@ -24,7 +24,7 @@ alias_cd()
     cd "$@"
     s
 }
-alias cd=alias_cd
+#alias cd=alias_cd
 
 alias word="grep -n -r . -e "
 
