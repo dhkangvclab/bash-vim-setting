@@ -21,10 +21,10 @@ alias s='clear; pwd | while read line; do echo -n $line'/'; done; echo ''; vline
 
 alias_cd()
 {
-    cd "$@"
+    builtin cd "$@"
     s
 }
-#alias cd=alias_cd
+alias cd=alias_cd
 
 alias word="grep -n -r . -e "
 
