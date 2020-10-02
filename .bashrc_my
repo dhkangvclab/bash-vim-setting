@@ -33,3 +33,8 @@ function _rmtrash(){
 };
 #alias rmrm=/bin/rm
 #alias rm="_rmtrash"
+
+alias matlabcli="matlab -nosplash -nodesktop -nodisplay"
+
+alias ii="gnome-open"
+
