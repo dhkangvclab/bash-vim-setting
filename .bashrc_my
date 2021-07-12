@@ -38,3 +38,6 @@ alias matlabcli="matlab -nosplash -nodesktop -nodisplay"
 
 alias ii="gnome-open"
 
+gpu_watch(){
+    watch -n 0.5 -d nvidia-smi
+}
