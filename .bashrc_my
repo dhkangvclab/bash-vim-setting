@@ -41,3 +41,9 @@ alias ii="gnome-open"
 gpu_watch(){
     watch -n 0.5 -d nvidia-smi
 }
+
+function mount_netdrive(){
+    # Required sudo apt install nfs-common cifs-utils
+    mkdir -p "$2" && (mountpoint -q "$2" || sudo mount -t cifs "$1/$2" "$2" -o username="$3")
+    # -o uid=THISMACHINEUSERID -o gid=THISMACHINEGROUPID
+};
